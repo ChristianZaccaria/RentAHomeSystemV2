@@ -1,0 +1,69 @@
+<object-stream>
+  <list>
+    <com.example.rentahome.Property>
+      <id>1</id>
+      <description>Big House</description>
+      <address>123</address>
+      <category>Detached</category>
+      <county>Waterford</county>
+      <town>Dungarvan</town>
+      <BER>E</BER>
+      <eircode>X91 X328</eircode>
+      <price>500K</price>
+      <propertyAgent>Joe</propertyAgent>
+      <imageName>src/main/resources/com/example/rentahome/img/house2.jpg</imageName>
+    </com.example.rentahome.Property>
+    <com.example.rentahome.Property>
+      <id>2</id>
+      <description>New House</description>
+      <address>8873 John Street</address>
+      <category>Detached</category>
+      <county>Waterford</county>
+      <town>Tramore</town>
+      <BER>A</BER>
+      <eircode>X91 X832</eircode>
+      <price>300K</price>
+      <propertyAgent>Joe</propertyAgent>
+      <imageName>src/main/resources/com/example/rentahome/img/house1.jpg</imageName>
+    </com.example.rentahome.Property>
+    <com.example.rentahome.Property>
+      <id>3</id>
+      <description>Small Apartment</description>
+      <address>412 George Street</address>
+      <category>Apartment</category>
+      <county>Cork</county>
+      <town>Cobh</town>
+      <BER>B</BER>
+      <eircode>X92 X322</eircode>
+      <price>200K</price>
+      <propertyAgent>Jackson</propertyAgent>
+      <imageName>src/main/resources/com/example/rentahome/img/apartment1.jpg</imageName>
+    </com.example.rentahome.Property>
+    <com.example.rentahome.Property>
+      <id>4</id>
+      <description>XS Apartment Room</description>
+      <address>48 Jolly Street</address>
+      <category>Apartment</category>
+      <county>Waterford</county>
+      <town>Tramore</town>
+      <BER>E</BER>
+      <eircode>X93 X390</eircode>
+      <price>100K</price>
+      <propertyAgent>Joe</propertyAgent>
+      <imageName></imageName>
+    </com.example.rentahome.Property>
+    <com.example.rentahome.Property>
+      <id>5</id>
+      <description>Medium House</description>
+      <address>868 O Mc Street</address>
+      <category>Semi-Detached</category>
+      <county>Dublin</county>
+      <town>Lucan</town>
+      <BER>G</BER>
+      <eircode>X21 X4282</eircode>
+      <price>300K</price>
+      <propertyAgent>Jackson</propertyAgent>
+      <imageName>C:\Users\Christian Zaccaria\Documents\WIT\Modules\Second Year\Data Structures &amp; Algorithms\CA2\Rent-A-Home CA2 - Christian Zaccaria (20092351)\src\main\resources\com\example\rentahome\img\default-image.jpg</imageName>
+    </com.example.rentahome.Property>
+  </list>
+</object-stream>

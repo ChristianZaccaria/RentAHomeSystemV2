@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" stylesheets="@niceTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rentahome.AdminController">
+    <children>
+        <BorderPane prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox prefHeight="49.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="24.0" prefWidth="640.0" text="Rent-A-Home Administrator Page">
+                            <font>
+                                <Font size="26.0" />
+                            </font>
+                        </Label>
+                        <Separator prefHeight="20.0" prefWidth="640.0" />
+                    </children>
+                </VBox>
+            </top>
+            <left>
+                <VBox prefHeight="271.0" prefWidth="293.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ButtonBar prefHeight="46.0" prefWidth="293.0">
+                            <buttons>
+                                <Label prefHeight="28.0" prefWidth="326.0" text="User">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Button minWidth="64.0" mnemonicParsing="false" onAction="#onReadButtonClick" prefHeight="25.0" text="Read" />
+                            </buttons>
+                        </ButtonBar>
+                  <ListView fx:id="listAgent" prefHeight="200.0" prefWidth="200.0" />
+                        <ButtonBar prefHeight="40.0" prefWidth="262.0">
+                            <buttons>
+                                <Button mnemonicParsing="false" onAction="#onDisplayAgentButtonClick" prefHeight="25.0" prefWidth="183.0" text="Display All" />
+                            </buttons>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                        </ButtonBar>
+                    </children>
+                </VBox>
+            </left>
+            <right>
+                <VBox prefHeight="293.0" prefWidth="329.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <GridPane prefWidth="363.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label prefHeight="17.0" prefWidth="185.0" text="Property Agent">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label prefHeight="17.0" prefWidth="228.0" text="============" GridPane.rowIndex="1" />
+                                <Label prefHeight="17.0" prefWidth="230.0" text="Name" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                                <Label prefHeight="17.0" prefWidth="167.0" text="Email" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                                <Label prefHeight="17.0" prefWidth="186.0" text="Password" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                                <Label prefHeight="17.0" prefWidth="181.0" text="Phone Number" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                                <Label text="Details" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label prefHeight="17.0" prefWidth="182.0" text="=============" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="name" promptText="Enter Name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField fx:id="email" promptText="Enter Email" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <TextField fx:id="phoneNumber" promptText="Enter Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <Button mnemonicParsing="false" onAction="#onCreateButtonClick" prefHeight="25.0" prefWidth="151.0" text="Create" GridPane.rowIndex="8" />
+                                <Button mnemonicParsing="false" onAction="#onClearDetailsButtonClick" prefHeight="25.0" prefWidth="146.0" text="Clear" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                <Button mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="25.0" prefWidth="152.0" text="Update" GridPane.rowIndex="9" />
+                                <Button mnemonicParsing="false" onAction="#onDeleteAgentButtonClick" prefHeight="25.0" prefWidth="146.0" text="Delete" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <PasswordField fx:id="password" promptText="Enter Password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="User Type" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label text="Enabled?" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <TextField fx:id="userType" promptText="Agent or Administrator" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="enable" promptText="True or False" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                            </children>
+                        </GridPane>
+                        <Label fx:id="feedbackMain" prefHeight="67.0" prefWidth="329.0" text="Feedback Area" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                    </children>
+                </VBox>
+            </right>
+            <bottom>
+                <VBox prefHeight="136.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Separator prefHeight="0.0" prefWidth="640.0" />
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                        <Label prefHeight="30.0" text="Property">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="propertyId" promptText="ID #" />
+                        <ComboBox fx:id="county" prefWidth="150.0" promptText="County" />
+                        <ComboBox fx:id="town" prefHeight="25.0" prefWidth="157.0" promptText="Town" />
+                        <ComboBox fx:id="category" prefWidth="150.0" promptText="Category" />
+                        <ComboBox fx:id="price" prefWidth="150.0" promptText="Price" />
+                        <Button mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="38.0" text="Search" />
+                    </buttons>
+                     <VBox.margin>
+                        <Insets right="15.0" />
+                     </VBox.margin>
+                  </ButtonBar>
+                  <TextArea fx:id="propertyTextArea" prefHeight="200.0" prefWidth="640.0" />
+                  <ButtonBar prefHeight="25.0" prefWidth="568.0">
+                    <buttons>
+                        <Button mnemonicParsing="false" onAction="#onReadPropertyButtonClick" text="Read Property" />
+                      <Button mnemonicParsing="false" onAction="#onDisplayPropertyButtonClick" prefHeight="17.0" prefWidth="95.0" text="Display All">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets right="1.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onClearPropertyButtonClick" text="Clear">
+                           <padding>
+                              <Insets right="1.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onDeletePropertyButtonClick" text="DELETE" />
+                        <Button mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logout" />
+                    </buttons>
+                  </ButtonBar>
+                  <Label fx:id="feedbackBottom" prefHeight="17.0" prefWidth="311.0" text="Feedback Area" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </VBox>
+            </bottom>
+            <center>
+                <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+            </center>
+        </BorderPane>
+    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

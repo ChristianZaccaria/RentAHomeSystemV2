@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@niceTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rentahome.RegisterController">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox prefHeight="358.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="43.0" prefWidth="600.0" text="Rent-A-Home Register Page">
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                        </Label>
+                        <Separator prefHeight="25.0" prefWidth="600.0" />
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <Label prefHeight="27.0" prefWidth="153.0" text="Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name" prefHeight="25.0" prefWidth="220.0" promptText="Enter your Name" />
+                     </items>
+                  </ToolBar>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0">
+                            <items>
+                                <Label prefHeight="35.0" prefWidth="153.0" text="Email">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="email" prefHeight="25.0" prefWidth="219.0" promptText="Enter your Email" />
+                            </items>
+                        </ToolBar>
+                        <ToolBar prefHeight="40.0" prefWidth="200.0">
+                            <items>
+                                <Label prefHeight="35.0" prefWidth="153.0" text="Password">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <PasswordField fx:id="password" prefHeight="25.0" prefWidth="220.0" promptText="Enter your Password" />
+                            </items>
+                        </ToolBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <Label prefHeight="35.0" prefWidth="153.0" text="Confirm Password">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="confirmPassword" prefHeight="25.0" prefWidth="220.0" promptText="Enter your Password Again" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <Label prefHeight="27.0" prefWidth="152.0" text="Phone Number">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="phoneNumber" prefHeight="25.0" prefWidth="222.0" promptText="Enter your Phone Number" />
+                     </items>
+                  </ToolBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <Label prefHeight="17.0" prefWidth="146.0" text="User Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="agent" mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="Agent" />
+                        <RadioButton fx:id="admin" mnemonicParsing="false" text="Administrator" />
+                     </items>
+                  </ToolBar>
+                  <Button mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="25.0" prefWidth="112.0" text="Register">
+                     <VBox.margin>
+                        <Insets left="460.0" />
+                     </VBox.margin>
+                  </Button>
+                        <Label fx:id="feedback" prefHeight="87.0" prefWidth="600.0" text="Feedback" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </top>
+            <bottom>
+                <VBox prefHeight="42.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Separator prefHeight="0.0" prefWidth="600.0" />
+                        <ToolBar prefHeight="36.0" prefWidth="351.0">
+                            <items>
+                                <Label alignment="CENTER" prefHeight="26.0" prefWidth="386.0" text="Already Registered?">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                                <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="25.0" prefWidth="94.0" text="Login" />
+                                <Button mnemonicParsing="false" onAction="#onBackButtonClick" prefHeight="25.0" prefWidth="95.0" text="Back" />
+                            </items>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </ToolBar>
+                    </children>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>
